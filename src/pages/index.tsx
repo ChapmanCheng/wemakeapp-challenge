@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import useAuth from "../hooks/useAuth";
+import { useContext } from "react";
+import { TokenContext } from "../context/token";
 
 const Home: NextPage = () => {
-  const token = useAuth();
-
-  return <div>Hello World</div>;
+  const token = useContext(TokenContext);
+  return <div>Hello World - {token?.access_token}</div>;
 };
 
 export default Home;
