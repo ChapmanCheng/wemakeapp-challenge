@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "https-proxy": "local-ssl-proxy --source 3001 --target 3000"
+    "https-proxy": "local-ssl-proxy --source 3001 --target 3000",
+    "export": "next export"
   },
   "dependencies": {
     "@apollo/client": "^3.6.5",
