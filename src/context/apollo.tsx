@@ -19,10 +19,12 @@ const defaultClient = new ApolloClient(clientOptions);
 
 function ApolloProviderWithAuth({ children }: PropsWithChildren<unknown>) {
   const token = useContext(TokenContext);
+
   const authorization = useMemo(() => {
     if (token) return `${token.token_type} ${token.access_token}`;
     return "";
   }, [token]);
+
   const [client, setClient] = useState(defaultClient);
 
   useEffect(() => {

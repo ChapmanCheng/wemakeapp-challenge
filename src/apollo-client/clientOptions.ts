@@ -3,12 +3,13 @@ import {
   InMemoryCache,
   NormalizedCacheObject,
 } from "@apollo/client";
+import httpLink from "./links/httpLink";
 
 const clientOptions: ApolloClientOptions<NormalizedCacheObject> = {
   cache: new InMemoryCache(),
   name: "ProductHuntApi",
+  link: httpLink,
   connectToDevTools: process.env.NODE_ENV === "development",
-  uri: process.env.NEXT_PUBLIC_PH_URI,
 };
 
 export default clientOptions;
