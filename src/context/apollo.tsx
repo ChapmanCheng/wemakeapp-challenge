@@ -4,13 +4,8 @@ import {
   ApolloProvider,
   concat,
 } from "@apollo/client";
-import {
-  PropsWithChildren,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import type { PropsWithChildren } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import clientOptions from "../apollo-client/clientOptions";
 import httpLink from "../apollo-client/links/httpLink";
 import { TokenContext } from "./token";
