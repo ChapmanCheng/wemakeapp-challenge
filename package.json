@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "https-proxy": "local-ssl-proxy --source 3001 --target 3000"
   },
   "dependencies": {
     "@apollo/client": "^3.6.5",
@@ -21,6 +22,7 @@
     "@types/react-dom": "18.0.5",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
+    "local-ssl-proxy": "^1.3.0",
     "typescript": "4.7.2"
   }
 }
