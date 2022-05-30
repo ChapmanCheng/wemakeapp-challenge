@@ -6,14 +6,9 @@ import { TokenContext } from "../context/token";
 const Home: NextPage = () => {
   const token = useContext(TokenContext);
 
-  if (token === undefined)
-    return <div className="container mx-auto">Fetching Token...</div>;
+  if (token === undefined) return <div>Fetching Token...</div>;
 
-  return (
-    <div className="container mx-auto">
-      <PHPosts />
-    </div>
-  );
+  return <PHPosts />;
 };
 
 export default Home;

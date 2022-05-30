@@ -15,9 +15,7 @@ const GET_POST_1 = gql`
 `;
 
 export default function PHPosts() {
-  const { data, loading, error } = useQuery(GET_POST_1, {
-    variables: { $first: 1 },
-  });
+  const { data, loading, error } = useQuery(GET_POST_1);
 
   useEffect(() => {
     console.log(data);

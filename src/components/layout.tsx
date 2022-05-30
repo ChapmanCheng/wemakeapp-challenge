@@ -3,12 +3,12 @@ import type { PropsWithChildren } from "react";
 
 export default function Layout({ children }: PropsWithChildren<unknown>) {
   return (
-    <div className="container mx-auto xl:mx-8">
+    <div className="container mx-4 md:mx-auto xl:mx-8">
       <div className="flex flex-col flex-nowrap">
-        <div className="flex-none">
+        <section className="flex-none">
           <Title />
-        </div>
-        <div className="flex-1">{children}</div>
+        </section>
+        <section className="flex-1">{children}</section>
       </div>
     </div>
   );

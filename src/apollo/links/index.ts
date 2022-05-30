@@ -1,6 +1,2 @@
-import { from } from "@apollo/client";
-import authLink from "./authLink";
-import errorLink from "./errorLink";
-import httpLink from "./httpLink";
-
-export default from([errorLink, authLink, httpLink]);
+export { default as errorLink } from "./errorLink";
+export { default as httpLink } from "./httpLink";
