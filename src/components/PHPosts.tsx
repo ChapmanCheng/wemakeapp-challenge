@@ -15,9 +15,25 @@ const GET_POST_1 = gql`
     }
   }
 `;
-
+const GET_POSTS = gql`
+  query GetPosts {
+    posts(first: 30) {
+      edges {
+        node {
+          id
+          name
+          url
+          thumbnail {
+            url
+            type
+          }
+        }
+      }
+    }
+  }
+`;
 export default function PHPosts() {
-  const { data, loading, error } = useQuery<ReturnQuery>(GET_POST_1);
+  const { data, loading, error } = useQuery<ReturnQuery>(GET_POSTS);
 
   useEffect(() => {
     console.log(data);
